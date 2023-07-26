@@ -7,3 +7,9 @@
 [LTNC-03](https://docs.google.com/document/d/1on3mdvGvmpQ0JgQIbB7Yb_ZTsewkT-KAlXoTR56zbG0/edit) 
 
 [LTNC-04](https://docs.google.com/document/d/1UiLxGEGIyh7gHZAj_uas-VHECS7Ee4BAl8NXbLBfCQM/edit) 
+
+[LTNC-05](https://docs.google.com/document/d/1KBW0b_97pi9BYLgYKsRNVQCaBxpwFzb21NWbhC1SIJU/edit) 
+
+[LTNC-06](https://docs.google.com/document/d/1_Yx3PCUwNEZXfo7r7xCKzra2DcO08Ul7HuYLnO_rf04/edit) 
+
+[LTNC-07](https://docs.google.com/document/d/1n28AtDkpqfLaw-UfHMHkFIQQn6_vvz2bT4BU73z3u1E/edit) 
