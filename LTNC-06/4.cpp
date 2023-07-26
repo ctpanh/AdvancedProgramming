@@ -1,56 +1,74 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-// Implement the class Box
-// l,b,h are integers representing the dimensions of the box
-
-// The class should have the following functions :
-
-// Constructors:
-// Box();
-// Box(int,int,int);
-// Box(Box);
-
-// int getLength(); // Return box's length
-// int getBreadth (); // Return box's breadth
-// int getHeight ();  //Return box's height
-// long long CalculateVolume(); // Return the volume of the box
-
-// Overload operator < as specified
-// bool operator<(Box& b)
-
-// Overload operator << as specified
-// ostream& operator<<(ostream& out, Box& B)
-
 class Box
 {
 private:
-    int l_, w_, h_;
+    int length, breadth, height;
 
 public:
-    Box(int l = 0, int w = 0, int h = 0) : l_(l), w_(w), h_(h) {}
-    Box(Box &B) : l_(B.l_), w_(B.w_), h_(B.h_) {}
-    int getLength() { return l_; }
-    int getBreadth() { return w_; }
-    int getHeight() { return h_; }
-    long long CalculateVolume() { return (long long)l_ * (long long)w_ * (long long)h_; }
+    // Constructors:
+    Box()
+    {
+        length = 0;
+        breadth = 0;
+        height = 0;
+    }
+    Box(int l, int b, int h)
+    {
+        length = l;
+        breadth = b;
+        height = h;
+    }
+    // Box(Box);
+    Box(const Box &B)
+    {
+        length = B.length;
+        breadth = B.breadth;
+        height = B.height;
+    }
+    int getLength()
+    {
+        return length;
+    }
+    int getBreadth()
+    {
+        return breadth;
+    }
+    int getHeight()
+    {
+        return height;
+    }
+    long long CalculateVolume()
+    {
+        return (long long)(breadth)*length * height;
+    }
     bool operator<(Box &B)
     {
-        if (l_ > B.l_)
-            return false;
-        if (l_ < B.l_)
+        if (length < B.length)
+        {
             return true;
-        if (w_ > B.w_)
-            return false;
-        if (w_ < B.w_)
-            return true;
-        return h_ < B.h_;
+        }
+        else if (length == B.length)
+        {
+            if (breadth < B.breadth)
+            {
+                return true;
+            }
+            else if (breadth == B.breadth)
+            {
+                if (height < B.height)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
-    friend ostream &operator<<(ostream &out, Box &B)
-    {
-        out << B.getLength() << ' ' << B.getBreadth() << ' ' << B.getHeight();
-        return out;
-    }
+};
+ostream &operator<<(ostream &out, Box &B)
+{
+    out << B.getLength() << " " << B.getBreadth() << " " << B.getHeight();
+    return out;
 };
 
 void check2()
